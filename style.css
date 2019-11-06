@@ -1,0 +1,88 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.clearfix{
+  clear: both;
+  display: table;
+  content: "";
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+aside{
+  text-align: left;
+  padding: 30px 15px 10px 15px;
+  background-color: #363606;
+}
+
+aside span{
+  display: none;
+}
+
+.aside-float{
+  float: left;
+}
+
+.recenti{
+  display: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+aside a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+aside a:hover{
+  color: white;
+}
+
+#logo{
+  padding-bottom: 30px;
+  display: block;
+  color: white;
+}
+
+#logo i{
+  font-size: 35px;
+}
+
+.recenti h5{
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+.recenti p{
+  font-size: 14px;
+}
+
+.recenti p:not(:last-child){
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 426px) {
+  aside i{
+    margin-right: 10px;
+  }
+
+  aside span{
+    display: inline-block;
+  }
+
+  .recenti{
+    display: block;
+  }
+}
