@@ -30,6 +30,7 @@ aside{
   width: 65px;
   text-align: center;
   overflow: auto;
+  float: left;
 }
 
 aside span{
@@ -162,7 +163,72 @@ aside a:hover{
   position: absolute;
 }
 
+main{
+  background-color: #181818;
+  padding: 30px;
+  height: calc(100% - 90px);
+  text-align: center;
+  overflow: auto;
+}
 
+header{
+  padding-bottom: 30px;
+  text-align: left;
+}
+
+.menu{
+  display: none;
+}
+
+.nav-menu li{
+  display: inline-block;
+}
+
+.nav-menu a{
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.nav-menu ul li:first-child a{
+  position: relative;
+  color: white;
+}
+
+.nav-menu ul li:first-child a::after{
+  display: block;
+  height: 2px;
+  background-color: limegreen;
+  width: 30px;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin-top: 4px;
+}
+
+.nav-menu a:hover{
+  color: white;
+}
+
+.menu-bars{
+  display: block;
+}
+
+.menu-bars a{
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+}
+
+.menu-bars a:hover{
+  color: white;
+}
 
 footer{
   padding: 15px;
@@ -364,6 +430,14 @@ i.fa-pause{
 
 
 @media screen and (min-width: 1024px) {
+  .menu{
+    display: block;
+  }
+
+  .menu-bars{
+    display: none;
+  }
+
   .fa-heart{
     left: 230px;
   }
