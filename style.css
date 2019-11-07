@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.clearfix{
+.clearfix::after{
   clear: both;
   display: table;
   content: "";
@@ -29,6 +29,7 @@ aside{
   height: calc(100% - 90px);
   width: 65px;
   text-align: center;
+  overflow: auto;
 }
 
 aside span{
@@ -171,8 +172,15 @@ footer{
   width: 100%;
 }
 
+.footer-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-left{
   position: relative;
+  height: 60px;
+  width: 30%;
 }
 
 img{
@@ -184,20 +192,24 @@ img{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: max-content;
   display: none;
 }
 
 .music .song{
   color: white;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .music .artist{
   color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .fa-heart{
   color: rgba(255, 255, 255, 0.6);
-  display: inline-block;
   position: absolute;
   left: 75px;
   top: 50%;
@@ -207,6 +219,112 @@ img{
 .fa-heart:hover{
   color: white;
   cursor: pointer;
+}
+
+.footer-center{
+  width: 70%;
+  text-align: center;
+}
+
+.footer-center-top{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+button{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.footer-center-top a{
+  color: rgba(255, 255, 255, 0.6);
+  margin: auto 15px;
+  font-size: 16px;
+}
+
+.footer-center-top a:hover{
+  color: white;
+}
+
+.cerchio{
+  display: inline-block;
+  width: 32px;
+  border: 1.2px solid rgba(255, 255, 255, 0.6);
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+  margin: auto 15px;
+}
+
+.cerchio:hover{
+  border-color: white;
+}
+
+i.fa-pause{
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.footer-center-bottom{
+  display: flex;
+  align-items: center;
+}
+
+.footer-center-bottom span{
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #404040;
+  outline: none;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.slider:hover{
+  background-color: limegreen;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.footer-right{
+  display: none;
+}
+
+.footer-right i{
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+
+.slider-volume{
+  width: 30%;
 }
 
 @media screen and (min-width: 767px) {
@@ -231,6 +349,17 @@ img{
     display: block;
   }
 
+  .footer-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30%;
+  }
+
+  .footer-center{
+    width: 40%;
+  }
+
 }
 
 
@@ -241,5 +370,23 @@ img{
 
   .music{
     display: inline-block;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .footer-center-top a{
+    margin: auto 8px;
+  }
+
+  .cerchio{
+    margin: auto 8px;
+  }
+
+  .footer-center{
+    width: 65%;
+  }
+
+  .footer-left{
+    width: 35%;
   }
 }
